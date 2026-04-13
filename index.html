@@ -14,12 +14,14 @@ html, body, #canvas {
 body {
 	color: white;
 	background-color: black;
-	overflow: hidden;
-	touch-action: none;
+	overflow-y: auto;
+	padding-bottom: 50px;
 }
 
 #canvas {
 	display: block;
+	margin: 0 auto;
+	touch-action: none;
 }
 
 #canvas:focus {
@@ -215,7 +217,7 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 }());
 		</script>
-			<div style="text-align: center; color: white; font-family: sans-serif; margin-top: 20px;">
+		<div style="text-align: center; color: white; font-family: sans-serif; margin-top: 20px;">
     	<h2>Controls</h2>
     	<p><b>Desktop:</b> Arrow Keys to Move/Rotate. Spacebar or Down Arrow to Drop.</p>
     	<p><b>Mobile:</b> Drag left/right to move. Tap to Rotate. Swipe down to Drop.</p>
