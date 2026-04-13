@@ -5,23 +5,32 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<title>TriKing</title>
 		<style>
-html, body, #canvas {
+html, body {
 	margin: 0;
 	padding: 0;
-	border: 0;
-}
-
-body {
-	color: white;
+	height: 100vh; 
 	background-color: black;
-	overflow-y: auto;
-	padding-bottom: 50px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
 }
 
 #canvas {
 	display: block;
-	margin: 0 auto;
+	flex-grow: 1; 
+	width: 100%;
 	touch-action: none;
+}
+
+#controls-container {
+	flex-shrink: 0; 
+	background-color: #111;
+	padding: 12px 0;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 14px;
+	border-top: 1px solid #333;
 }
 
 #canvas:focus {
@@ -217,10 +226,8 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 }());
 		</script>
-		<div style="text-align: center; color: white; font-family: sans-serif; margin-top: 20px;">
-    	<h2>Controls</h2>
-    	<p><b>Desktop:</b> Arrow Keys to Move/Rotate. Spacebar or Down Arrow to Drop.</p>
-    	<p><b>Mobile:</b> Drag left/right to move. Tap to Rotate. Swipe down to Drop.</p>
+		<div id="controls-container">
+			<p style="margin: 5px 0; color: #ccc;"><b>Desktop:</b> Arrow Keys to Move/Rotate. Down to Drop. &nbsp;|&nbsp; <b>Mobile:</b> Drag to Move. Tap to Rotate. Swipe Down to Drop.</p>
 		</div>
 	</body>
 </html>
