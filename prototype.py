@@ -120,7 +120,7 @@ class Game:
 class TriKingsApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Tri-Kings")
+        self.root.title("TriKing")
         self.canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT, bg=BG_COLOR, highlightthickness=0)
         self.canvas.pack()
 
@@ -180,7 +180,7 @@ class TriKingsApp:
     def draw_menu(self):
         self.canvas.delete("all")
         self.canvas.create_text(WIDTH//2, HEIGHT//2 - 40,
-                                text="TRI-KINGS",
+                                text="TriKing",
                                 fill="white",
                                 font=("Arial", 32, "bold"))
         self.canvas.create_text(WIDTH//2, HEIGHT//2 + 20,
