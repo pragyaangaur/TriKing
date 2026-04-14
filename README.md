@@ -1,8 +1,10 @@
 # TriKing
 
-TriKing is a high-speed, tile-matching puzzle game with pseudo-triominos engineered for cross-platform play (Desktop and Mobile Web). Built entirely from scratch, this repository contains the core game engine, state management logic, and UI rendering pipeline. The system has been compiled to WebAssembly (WASM) and is currently deployed as a live web application. 
+Play the game <a href="https://pragyaangaur.github.io/TriKing/">here</a>.  
+It looks simple… until it really, really isn’t.
 
 ## Overview
+TriKing is a high-speed, tile-matching puzzle game with pseudo-triominos engineered for cross-platform play (Desktop and Mobile Web). Built entirely from scratch, this repository contains the core game engine, state management logic, and UI rendering pipeline. The system has been compiled to WebAssembly (WASM) and is currently deployed as a live web application. 
 
 This repository focuses on the software architecture of the game, specifically the implementation of the grid-based collision physics, advanced scoring algorithms, and the unified input handler for touch and keyboard interfaces.
 
