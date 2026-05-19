@@ -5,32 +5,21 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<title>TriKing</title>
 		<style>
-html, body {
+html, body, #canvas {
 	margin: 0;
 	padding: 0;
-	height: 100vh; 
-	background-color: black;
+	border: 0;
+}
+
+body {
 	color: white;
-	display: flex;
-	flex-direction: column;
+	background-color: black;
 	overflow: hidden;
+	touch-action: none;
 }
 
 #canvas {
 	display: block;
-	flex-grow: 1; 
-	width: 100%;
-	touch-action: none;
-}
-
-#controls-container {
-	flex-shrink: 0; 
-	background-color: #111;
-	padding: 12px 0;
-	text-align: center;
-	font-family: sans-serif;
-	font-size: 14px;
-	border-top: 1px solid #333;
 }
 
 #canvas:focus {
@@ -122,7 +111,7 @@ html, body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":215424,"index.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1136280,"index.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -226,9 +215,6 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 }());
 		</script>
-		<div id="controls-container">
-			<p style="margin: 5px 0; color: #ccc;"><b>Desktop:</b> Arrow Keys to Move/Rotate. Down to Drop. &nbsp;|&nbsp; <b>Mobile:</b> Drag to Move. Tap to Rotate. Swipe Down to Drop.</p>
-		</div>
 	</body>
 </html>
 
