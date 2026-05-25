@@ -3,6 +3,14 @@
 Play the game on itch.io <a href="https://triking.itch.io/triking">here</a>.  
 It looks simple… until it really, really isn’t.
 
+
+
+<p align="center">
+<img src="Assets/TriKing1.jpeg" width="650">
+
+---
+
+
 ## Overview
 TriKing is a high-speed, tile-matching puzzle game with pseudo-triominos engineered for cross-platform play (Desktop and Mobile Web). Built entirely from scratch, this repository contains the core game engine, state management logic, and UI rendering pipeline. The system has been compiled to WebAssembly (WASM) and is currently deployed as a live web application. 
 
@@ -68,3 +76,7 @@ Providing a native, zero-friction control scheme regardless of whether the user 
 The input listener intercepts `InputEventScreenTouch`. If the displacement vector between the initial touch and the release exceeds the predefined `SWIPE_THRESHOLD`, it calculates the dominant axis (X or Y) to determine movement or hard drops. If the vector is below the threshold, it registers as a rotational tap. 
 
 **Stack:** HTML5 / WebAssembly Export
+
+
+<p align="center">
+<img src="Assets/TriKing2.jpeg" width="650">
