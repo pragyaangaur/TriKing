@@ -1,6 +1,6 @@
 # TriKing
 
-Play the game <a href="https://pragyaangaur.github.io/TriKing/">here</a>.  
+Play the game on itch.io <a href="https://triking.itch.io/triking">here</a>.  
 It looks simple… until it really, really isn’t.
 
 ## Overview
