@@ -29,7 +29,7 @@ Decoupling the visual rendering of the blocks from the underlying mathematical g
 **Approach:**
 * Implementation of a strict State Machine (`MENU`, `PLAYING`, `GAMEOVER`, `PAUSED`).
 * Virtual 8x18 matrix for discrete collision detection and boundary locking.
-* "7-Bag" randomizer algorithm to ensure fair distribution of the 6 distinct pieces (Kings and Hooks).
+* Balanced piece queue algorithm to ensure fair distribution of the 6 distinct pieces (Kings and Hooks).
 
 **How it Works:**
 The engine updates a virtual 2D array every tick. Visuals are only drawn based on the current state of this array. Timers and input listeners check the current `game_state` before executing, preventing bugs like pieces falling while paused or game-over sounds looping.
@@ -73,7 +73,7 @@ Providing a native, zero-friction control scheme regardless of whether the user 
 * Echo-event handling for hardware keyboards to allow continuous soft-dropping.
 
 **How it Works:**
-The input listener intercepts `InputEventScreenTouch`. If the displacement vector between the initial touch and the release exceeds the predefined `SWIPE_THRESHOLD`, it calculates the dominant axis (X or Y) to determine movement or hard drops. If the vector is below the threshold, it registers as a rotational tap. 
+The input listener intercepts `InputEventScreenTouch`. If the displacement vector between the initial touch and the release exceeds the predefined `SWIPE_THRESHOLD`, it calculates the dominant axis (X or Y) to determine movement or instant drops. If the vector is below the threshold, it registers as a rotational tap. 
 
 **Stack:** HTML5 / WebAssembly Export
 
