@@ -1,3 +1,7 @@
 .DS_Store
 .godot/
 /android/
+
+# Web export output. Built files are published as GitHub releases.
+/build/
+/index.*
